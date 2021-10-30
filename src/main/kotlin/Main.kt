@@ -2,15 +2,18 @@
 
 fun main() {
 
+// print a range of number in reverse order
+   var myList = mutableListOf<Int>()
+    println("Please enter 5 numbers")
+    for(i in 1..5){
 
-   var myArray = arrayOf(2,3,5,2,9)
-    var max :Int = 0
-    for(item in myArray){
-
-            max += item
+        var x = readLine()?.toInt()
+        if (x != null){
+            myList.add(x)
         }
-    var average = max / myArray.size
+    }
+    println("The 5 numbers in reverse order")
+        for(i in myList.size - 1 downTo 0)
 
-    println("Maximum Value is:  $max")
-    println("Average value is: $average")
+    println(myList[i])
 }
