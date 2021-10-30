@@ -1,15 +1,18 @@
 
 
 fun main() {
-    // Call the function
-printPow(2, 3)
+    // call the function
+sumUpToN(6)
 
 }
-// This function can calculate power of any number
-fun printPow(base : Int, exponent : Int){
-    var result = 1
-    for(i in 1.. exponent){
-        result *= base
+
+/**
+ * This function can sum up to the given number
+ */
+fun sumUpToN(n : Int){
+    var result = 0
+    for (i in 1..n){
+        result += i
     }
-    println("$base to the power of $exponent is $result" )
+    println("The sum of the value of 1 to $n is : $result")
 }
