@@ -2,18 +2,15 @@
 
 fun main() {
 
-// print a range of number in reverse order
-   var myList = mutableListOf<Int>()
-    println("Please enter 5 numbers")
-    for(i in 1..5){
+    println("Please enter your Country name: ")
 
-        var x = readLine()?.toInt()
-        if (x != null){
-            myList.add(x)
+    val origin = readLine()?.toString()?.uppercase()
+    if (origin != null) {
+        when (origin) {
+        "INDIA" -> println("YOU ARE 'INDIAN'")
+            "USA" -> println("You are from the 'USA'")
+            "ENGLAND" -> println("You are from the 'ENGLISH'")
+            else  -> println("You are not in listed")
         }
     }
-    println("The 5 numbers in reverse order")
-        for(i in myList.size - 1 downTo 0)
-
-    println(myList[i])
 }
