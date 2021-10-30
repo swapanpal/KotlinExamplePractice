@@ -1,18 +1,28 @@
-
-
+/**
+ * Input a number, If the number is in the list show it with index number
+ */
 fun main() {
-    // call the function
-sumUpToN(6)
 
+    val list = listOf(1,3,4,6,88,6)
+    println("The list looks like as following $list")
+    println("Search for the number : ")
+    val userInput = readLine()?.toInt()
+
+    if (userInput != null){
+        // call the function
+        println("The index of $userInput is ${indexof(list,userInput)}")
+    }
 }
 
 /**
- * This function can sum up to the given number
+ * This function return the index of the list
  */
-fun sumUpToN(n : Int){
-    var result = 0
-    for (i in 1..n){
-        result += i
+fun indexof(list : List<Int>, value : Int) : Int {
+
+    for (i in 0 until list.size -1){
+        if(list[i] == value){
+            return i
+        }
     }
-    println("The sum of the value of 1 to $n is : $result")
+    return -1
 }
