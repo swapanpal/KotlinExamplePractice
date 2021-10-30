@@ -1,16 +1,15 @@
 
 
 fun main() {
+    // Call the function
+printPow(2, 3)
 
-    println("Please enter your Country name: ")
-
-    val origin = readLine()?.toString()?.uppercase()
-    if (origin != null) {
-        when (origin) {
-        "INDIA" -> println("YOU ARE 'INDIAN'")
-            "USA" -> println("You are from the 'USA'")
-            "ENGLAND" -> println("You are from the 'ENGLISH'")
-            else  -> println("You are not in listed")
-        }
+}
+// This function can calculate power of any number
+fun printPow(base : Int, exponent : Int){
+    var result = 1
+    for(i in 1.. exponent){
+        result *= base
     }
+    println("$base to the power of $exponent is $result" )
 }
